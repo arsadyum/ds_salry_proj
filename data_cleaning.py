@@ -29,7 +29,7 @@ df['Company_text'] = df.apply(lambda x: x['Company Name'] if x['Rating'] <0 else
 #state field
 df['Job_State'] = df['Location'].apply(lambda x: x.split(',')[0])
 #df['Job_City'] = df['Location'].apply(lambda x: x.split([0]) 
-df.job_state.value_counts()
+df.Job_State.value_counts()
 df['Same_State'] = df.apply(lambda x: 1 if x.Location == x.Headquarters else 0, axis = 1)
 
 #age of Company
