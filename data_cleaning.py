@@ -54,4 +54,7 @@ df['Same_State'] = df.apply(lambda x: 1 if x.Location == x.Headquarters else 0, 
  #AWS
  df['AWS_yn'] = df['Job Description'].apply(lambda x: 1 if 'AWS' in x.lower() else 0)
  df.AWS_yn.value_counts()
- 
+
+df.to_csv('glassdoor_cleandedata.csv', index = False)
+
+pd.read_csv('glassdoor_cleandedata.csv')
